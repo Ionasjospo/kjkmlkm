@@ -22,5 +22,13 @@ namespace Ucu.Poo.Defense
             this.Quantity = quantity;
             this.Price = price;
         }
+
+
+        public int OneItemTotal()
+        {
+            int total = this.Quantity * this.Price;
+            return total;
+        }
     }
+
 }

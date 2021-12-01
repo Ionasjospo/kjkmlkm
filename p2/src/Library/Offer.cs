@@ -33,5 +33,16 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+
+        public string AsText()
+        {
+            string total_string = $"Fecha: {this.EndDate}\n";
+            foreach(OfferItem item in this.items)
+            {
+                total_string+= $"{item.Quantity} de {item.Residue.Name} a {item.Price}";
+            }
+            return total_string;
+        }
+
     }
 }
